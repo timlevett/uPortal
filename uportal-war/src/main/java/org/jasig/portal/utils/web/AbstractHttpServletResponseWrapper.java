@@ -166,6 +166,13 @@ public abstract class AbstractHttpServletResponseWrapper implements HttpServletR
     public void setContentLength(int len) {
         this.httpServletResponse.setContentLength(len);
     }
+    
+
+    @Override
+    public void setContentLengthLong(long len) {
+        this.httpServletResponse.setContentLengthLong(len);
+        
+    }
 
     @Override
     public void setContentType(String type) {

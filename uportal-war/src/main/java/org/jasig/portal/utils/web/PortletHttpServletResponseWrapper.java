@@ -208,6 +208,11 @@ public class PortletHttpServletResponseWrapper extends AbstractHttpServletRespon
     }
 
     @Override
+    public void setContentLengthLong(long len) {
+        this.logger.warn("Ignoring call to HttpServletResponse.setContentLengthLong({}) from {}", len, portletWindow);
+    }
+
+    @Override
     public void addHeader(String name, String value) {
         this.logger.warn("Ignoring call to HttpServletResponse.addHeader({}, {}) from {}", new Object[] { name, value, portletWindow });
     }
@@ -226,4 +231,5 @@ public class PortletHttpServletResponseWrapper extends AbstractHttpServletRespon
     public void setLocale(Locale loc) {
         this.logger.warn("Ignoring call to HttpServletResponse.setLocale({}) from {}", loc, portletWindow);
     }
+
 }
