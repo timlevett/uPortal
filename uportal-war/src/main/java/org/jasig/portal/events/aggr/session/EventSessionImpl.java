@@ -88,7 +88,7 @@ public class EventSessionImpl implements EventSession, Serializable {
     @Column(name="SESSION_ID", length=500, nullable=false, updatable=false)
     private final String eventSessionId;
     
-    @ManyToMany(targetEntity=AggregatedGroupMappingImpl.class, fetch=FetchType.EAGER)
+    @ManyToMany(targetEntity=AggregatedGroupMappingImpl.class, fetch=FetchType.LAZY)
     @JoinTable(name="UP_EVENT_SESSION_GROUPS", inverseJoinColumns = @JoinColumn(name = "GROUP_ID"))
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     @Fetch(FetchMode.JOIN)

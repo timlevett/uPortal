@@ -152,8 +152,8 @@
         <guava.version>14.0.1</guava.version>
         <groovy.version>2.1.2</groovy.version>
         <grouperClient.version>1.6.3</grouperClient.version>
-        <hibernate.version>4.1.9.Final</hibernate.version>
-        <hibernate-jpamodelgen.version>1.2.0.Final</hibernate-jpamodelgen.version>
+        <hibernate.version>4.3.5.Final</hibernate.version>
+        <hibernate-jpamodelgen.version>4.3.5.Final</hibernate-jpamodelgen.version>
         <hibernate-jpa-api.version>1.0.1.Final</hibernate-jpa-api.version>
         <hsqldb.version>2.2.9</hsqldb.version>
         <icu4j.version>51.1</icu4j.version>

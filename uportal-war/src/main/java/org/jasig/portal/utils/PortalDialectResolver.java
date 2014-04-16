@@ -24,13 +24,13 @@ import java.sql.SQLException;
 
 import org.hibernate.dialect.Dialect;
 import org.hibernate.dialect.SQLServer2005Dialect;
-import org.hibernate.service.jdbc.dialect.internal.AbstractDialectResolver;
+import org.hibernate.engine.jdbc.dialect.internal.StandardDialectResolver;
 
 /**
  * @author Eric Dalquist
  * @version $Revision$
  */
-public class PortalDialectResolver extends AbstractDialectResolver {
+public class PortalDialectResolver extends StandardDialectResolver {
     private static final long serialVersionUID = 1L;
     
     protected final Dialect resolveDialectInternal(DatabaseMetaData metaData) throws SQLException {

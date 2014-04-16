@@ -29,7 +29,8 @@ import java.util.concurrent.ConcurrentMap;
 import javax.sql.DataSource;
 
 import org.hibernate.dialect.Dialect;
-import org.hibernate.service.jdbc.dialect.spi.DialectResolver;
+import org.hibernate.engine.jdbc.dialect.spi.DatabaseMetaDataDialectResolutionInfoAdapter;
+import org.hibernate.engine.jdbc.dialect.spi.DialectResolver;
 import org.hibernate.service.spi.SessionFactoryServiceRegistry;
 import org.jasig.portal.hibernate.DelegatingHibernateIntegrator.HibernateConfiguration;
 import org.jasig.portal.hibernate.HibernateConfigurationAware;
@@ -113,7 +114,6 @@ public class DelayedValidationQueryResolverImpl implements DelayedValidationQuer
 			final Class<? extends Dialect> dialectEntryType = validationQueryEntry.getKey();
 			if (dialectEntryType.isAssignableFrom(dialectType)) {
 				validationQuery = validationQueryEntry.getValue();
-				
 				//Cache the resolution for future tests
 				this.validationQueryMap.put(dialectType, validationQuery);
 				return validationQuery;
@@ -130,7 +130,7 @@ public class DelayedValidationQueryResolverImpl implements DelayedValidationQuer
 				@Override
 				public Object processMetaData(DatabaseMetaData dbmd) throws SQLException,
 						MetaDataAccessException {
-					return dialectResolver.resolveDialect(dbmd);
+					return dialectResolver.resolveDialect(new DatabaseMetaDataDialectResolutionInfoAdapter(dbmd));
 				}
 			});
 		} catch (MetaDataAccessException e) {
