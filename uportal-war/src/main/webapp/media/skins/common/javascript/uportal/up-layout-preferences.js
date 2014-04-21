@@ -52,16 +52,28 @@ var uportal = uportal || {};
      * callback : should be a function or null
      */
     var showMessage = function (msg, type, callback) {
-        var messageDiv = $("#portalPageBodyMessage");
-        if (msg && type) {
-		var delay = (type == typeMsg.ERROR) ? 5000 : 2000;
-		if (messageDiv.length != 0) {
-			messageDiv.html('<p>' + msg + '</p>');
-			messageDiv.removeClass().addClass(type).show().delay(delay).fadeOut(400, callback);
-		} else return callback;
-	} else {
-		return callback;
-	}
+        if(up.notify != undefined) {
+            up.notify(msg,'TopCenter', type, '#portalPageBodyMessage');
+        } else {
+            var messageDiv = $("#portalPageBodyMessage");
+            if (msg && type) {
+        		var delay = (type == typeMsg.ERROR) ? 5000 : 2000;
+        		if (messageDiv.length != 0) {
+        			messageDiv.html('<p>' + msg + '</p>');
+        			messageDiv.removeClass().addClass(type).show().delay(delay).fadeOut(400, callback);
+        		} else { 
+        		    return callback;
+        		}
+        	} else {
+        		return callback;
+        	}
+        }
+    };
+    
+    up.showMessage = function(container, options) {
+        var that = fluid.initView("up.showMessage", container, options);
+        showMessage(options.msg,options.type);
+        return that; 
     };
 
 

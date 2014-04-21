@@ -21,14 +21,6 @@ var up = up || {};
 
 (function($){
     
-    up.notify = function(messageText, messageLayout, messageType){
-        $('#up-notification').noty({
-            text: messageText,
-            layout: messageLayout,
-            type: messageType
-        });
-    };
-    
     $.fn.createRatingModal = function(){
         var that=this;
         var modalTitle = ['<h4 class="modal-title" style="white-space: nowrap"><strong>', $(this).data('title'), '</strong></h4>'].join('');
