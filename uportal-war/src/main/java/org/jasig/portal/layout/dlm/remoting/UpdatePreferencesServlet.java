@@ -1085,7 +1085,7 @@ public class UpdatePreferencesServlet {
                                         String sourceId, 
                                         String destinationId, 
                                         String method) {
-      if(destinationId == null || destinationId.length() == 0) {//shortcut for beginning and end
+      if(StringUtils.isEmpty(destinationId)) {//shortcut for beginning and end
         return true;
       }
       IUserInstance ui = userInstanceManager.getUserInstance(request);
