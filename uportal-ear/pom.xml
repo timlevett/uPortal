@@ -25,34 +25,6 @@
 
         <dependency>
             <groupId>org.jasig.portal.portlets-overlay</groupId>
-            <artifactId>Announcements</artifactId>
-            <version>${project.version}</version>
-            <type>war</type>
-        </dependency>
-
-        <dependency>
-            <groupId>org.jasig.portal.portlets-overlay</groupId>
-            <artifactId>basiclti-portlet</artifactId>
-            <version>${project.version}</version>
-            <type>war</type>
-        </dependency>
-        
-        <dependency>
-            <groupId>org.jasig.portal.portlets-overlay</groupId>
-            <artifactId>BookmarksPortlet</artifactId>
-            <version>${project.version}</version>
-            <type>war</type>
-        </dependency>
-        
-        <dependency>
-            <groupId>org.jasig.portal.portlets-overlay</groupId>
-            <artifactId>CalendarPortlet</artifactId>
-            <version>${project.version}</version>
-            <type>war</type>
-        </dependency>
-
-        <dependency>
-            <groupId>org.jasig.portal.portlets-overlay</groupId>
             <artifactId>cas</artifactId>
             <version>${project.version}</version>
             <type>war</type>
@@ -67,21 +39,7 @@
         
         <dependency>
             <groupId>org.jasig.portal.portlets-overlay</groupId>
-            <artifactId>email-preview</artifactId>
-            <version>${project.version}</version>
-            <type>war</type>
-        </dependency>
-
-        <dependency>
-            <groupId>org.jasig.portal.portlets-overlay</groupId>
             <artifactId>FunctionalTestsPortlet</artifactId>
-            <version>${project.version}</version>
-            <type>war</type>
-        </dependency>
-
-        <dependency>
-            <groupId>org.jasig.portal.portlets-overlay</groupId>
-            <artifactId>jasig-widget-portlets</artifactId>
             <version>${project.version}</version>
             <type>war</type>
         </dependency>
@@ -99,27 +57,6 @@
             <version>${resource-server.version}</version>
             <type>war</type>
         </dependency>
-        
-        <dependency>
-            <groupId>org.jasig.portal.portlets-overlay</groupId>
-            <artifactId>NewsReaderPortlet</artifactId>
-            <version>${project.version}</version>
-            <type>war</type>
-        </dependency>
-
-        <dependency>
-            <groupId>org.jasig.portal.portlets-overlay</groupId>
-            <artifactId>NotificationPortlet</artifactId>
-            <version>${project.version}</version>
-            <type>war</type>
-        </dependency>
-        
-        <dependency>
-            <groupId>org.jasig.portal.portlets-overlay</groupId>
-            <artifactId>sakai-connector</artifactId>
-            <version>${project.version}</version>
-            <type>war</type>
-        </dependency>
 
         <dependency>
             <groupId>org.jasig.portal.portlets-overlay</groupId>
@@ -128,20 +65,6 @@
             <type>war</type>
         </dependency>
 
-        <dependency>
-            <groupId>org.jasig.portal.portlets-overlay</groupId>
-            <artifactId>WeatherPortlet</artifactId>
-            <version>${project.version}</version>
-            <type>war</type>
-        </dependency>
-
-        <dependency>
-            <groupId>org.jasig.portal.portlets-overlay</groupId>
-            <artifactId>WebProxyPortlet</artifactId>
-            <version>${project.version}</version>
-            <type>war</type>
-        </dependency>
-        
         <dependency>
             <groupId>javax.ccpp</groupId>
             <artifactId>ccpp</artifactId>
